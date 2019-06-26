@@ -1,16 +1,15 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
-    path: __dirname + "/dist",
+    path: __dirname + "/public",
     publicPath: "/"
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: "./dist"
+    contentBase: "./public"
   },
   module: {
     rules: [
@@ -26,9 +25,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "Omise React challenge",
       template: "./public/index.html",
       meta: {
         viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // external css
+
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 
 import App from './App';
