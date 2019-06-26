@@ -1,35 +1,41 @@
-const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-const config = {
-  entry: './src/index.js',
+module.exports = {
+  entry: "./src/index.js",
   output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, 'build'),
-    publicPath: 'build',
+    filename: "bundle.js",
+    path: __dirname + "/dist",
+    publicPath: "/"
   },
-
-  devtool: 'inline-source-map',
-
+  devtool: 'source-map',
   devServer: {
-    inline: true,
-    host: '0.0.0.0',
-    port: 3000,
-    historyApiFallback: true,
-    disableHostCheck: true,
-    contentBase: 'public',
+    contentBase: "./dist"
   },
-
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: [/node_modules/],
-        use: {
-          loader: 'babel-loader',
-        },
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"]
       },
-    ],
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      }
+    ]
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: "Omise React challenge",
+      template: "./public/index.html",
+      meta: {
+        viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
+      }
+    })
+  ],
+  resolve: {
+    extensions: ["*", ".js"]
+  }
 };
-
-module.exports = config;
