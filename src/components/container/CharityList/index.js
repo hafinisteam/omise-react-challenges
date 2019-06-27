@@ -7,14 +7,14 @@ import {
 	getPaymentList,
 	payDonation
 } from '~/state/ducks/actions/charityPayment';
-import { donationDataAction } from '~/state/ducks/donationData';
 import { message, Spin } from 'antd';
+import { donationDataAction } from '~/state/ducks/donationData';
 import { summaryDonations } from '~/helpers';
 import useMiniReducer from '~/components/container/enhancers/useMiniReducer';
 import CharityItem from './CharityItem';
 
 const Wrapper = styled.div`
-	margin-top: 50px;
+	margin-top: 30px;
 `;
 
 const Item = styled.div`

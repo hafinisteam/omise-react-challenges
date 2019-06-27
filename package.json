@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Test Omise code challenge for frontend developer",
   "main": "src/index.js",
-  "repository": "git@git.omise.co:ratchagarn/tamboon-react.git",
-  "author": "Ratchagarn Naewbuntad <ratchagarn@omise.co>",
+  "author": "Hafini Steam <hafinisteam@gmail.com>",
   "license": "MIT",
   "scripts": {
     "server": "json-server --watch db.json --port 3001",
@@ -18,6 +17,7 @@
     "react-redux": "^7.1.0",
     "redux": "^4.0.1",
     "styled-components": "^4.3.2",
+    "uuid": "^3.3.2",
     "webpack-cli": "^3.3.5"
   },
   "devDependencies": {
@@ -49,7 +49,6 @@
     "react-spring": "^8.0.25",
     "recompose": "^0.30.0",
     "redux-logger": "^3.0.6",
-    "redux-persist": "^5.10.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.35.0",
     "webpack-dev-server": "^3.7.2"
