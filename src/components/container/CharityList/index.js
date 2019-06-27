@@ -1,84 +1,88 @@
-import React, { useEffect, useState, useReducer } from "react";
-import { compose } from "recompose";
-import styled from "styled-components";
-import { connect } from "react-redux";
-import produce from "immer";
-
+import React, { useEffect } from 'react';
+import { compose } from 'recompose';
+import styled from 'styled-components';
+import { connect } from 'react-redux';
 import {
-  getCharityList,
-  getPaymentList
-} from "~/state/ducks/actions/charityPayment";
-import { UIButton } from "~/components/presentation/ui/button";
-import { message, Spin } from "antd";
-
+	getCharityList,
+	getPaymentList
+} from '~/state/ducks/actions/charityPayment';
+import { donationDataAction } from '~/state/ducks/donationData';
+import { UIButton } from '~/components/presentation/ui/button';
+import { message, Spin } from 'antd';
+import { summaryDonations } from '~/helpers';
+import UICard from '~/components/presentation/ui/commons/UICard';
+import useMiniReducer from '~/components/container/enhancers/useMiniReducer';
 
 const Wrapper = styled.div`
-  margin-top: 50px;
+	margin-top: 50px;
 `;
 
-const initState = {
-  listData: [],
-  loading: false
-};
+const Item = styled.div`
+	margin-bottom: 50px;
+`;
 
-const reducer = produce((draft, action) => {
-  switch (action.type) {
-    case "load_list":
-      draft.loading = true;
-      return;
-    case "load_success":
-      draft.loading = false;
-      draft.listData = action.data;
-      return;
-    case "load_fail":
-      draft.loading = false;
-      return;
-    default:
-      return;
-  }
-});
+const LoadingWrapper = styled.div`
+	text-align: center;
+	padding: 40px;
+`;
 
 const CharityList = props => {
-  const { getCharityList } = props;
-  const [{ listData, loading }, listAction] = useReducer(reducer, initState);
+	const { getCharityList, getPaymentList, updateDonation } = props;
 
-  useEffect(() => {
-    listAction({type: 'load_list'});
-    try {
-      const getList = async () => {
-        const charityList = await getCharityList();
+	const { reducerData, loadList, loadSuccess, loadFail } = useMiniReducer();
 
-        // Delay some seconds to see loading in action
-        // setTimeout(() => {
-          listAction({type: 'load_success', data: charityList});
-        // }, 2000)
-      };
-      getList();
-    } catch (err) {
-      listAction({type: 'load_fail'});
-      message.error("Error get charity list");
-    }
-  }, []);
+	const { data, loading } = reducerData;
 
-  if(loading){
-    return <Spin />
-  }
+	// fetch charity list and payment
+	useEffect(() => {
+		loadList();
+		try {
+			const getList = async () => {
+				const charityList = await getCharityList();
+				const paymentList = await getPaymentList();
+				loadSuccess(charityList);
 
-  return (
-    <Wrapper>
-      {listData.map(l => (
-        <img src={`./images/${l.image}`} />
-      ))}
-    </Wrapper>
-  );
+				//Update donation amount on success
+				const donationAmount = summaryDonations(paymentList);
+				updateDonation(donationAmount);
+			};
+			getList();
+		} catch (err) {
+			loadFail();
+			message.error('Error get charity list');
+		}
+	}, []);
+
+	if (loading) {
+		return (
+			<LoadingWrapper>
+				<Spin size="large" />
+			</LoadingWrapper>
+		);
+	}
+
+	return (
+		<Wrapper className="row">
+			{data.map(charity => (
+				<Item className="col-12 col-sm-6" key={charity.id}>
+					<UICard
+						image={`/images/${charity.image}`}
+						title={charity.name}
+						extraTitle={<UIButton>Donate</UIButton>}
+					/>
+				</Item>
+			))}
+		</Wrapper>
+	);
 };
 
 export default compose(
-  connect(
-    null,
-    {
-      getCharityList,
-      getPaymentList
-    }
-  )
+	connect(
+		null,
+		{
+			getCharityList,
+			getPaymentList,
+			updateDonation: donationDataAction.updateDonation
+		}
+	)
 )(CharityList);

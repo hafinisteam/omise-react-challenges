@@ -1,7 +1,7 @@
-import * as appDataAction from './actions';
-import * as appDataSelector from './selectors';
+import * as donationDataAction from './actions';
+import * as donationDataSelector from './selectors';
 import reducer from './reducers';
 
-export { appDataAction, appDataSelector };
+export { donationDataAction, donationDataSelector };
 
 export default reducer;

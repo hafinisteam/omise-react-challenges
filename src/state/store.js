@@ -23,7 +23,7 @@ const configStore = () => {
 	
 	// only log action in dev mode
 	if(isDevEnv) {
-		  middlewares.push(createLogger());
+		middlewares.push(createLogger());
 	}
 
 	const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

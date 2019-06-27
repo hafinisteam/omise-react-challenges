@@ -13,6 +13,7 @@ const reducer = produce((draft, { payload, type }) => {
       return;
     case types.UPDATE_MESSAGE:
       draft.message = payload.message;
+    break;
     default:
       return draft;
   }
