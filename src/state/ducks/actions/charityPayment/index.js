@@ -7,3 +7,6 @@ export const getCharityList = () =>
 
 export const getPaymentList = () =>
 	apiAction("get")(types.LOAD_PAYMENT_LIST, '/payments');  
+
+export const payDonation = (body) =>
+	apiAction("post")(types.PAY_DONATION, '/payments', body);  

@@ -6,6 +6,7 @@ import storage from 'redux-persist/lib/storage';
 import { apiService } from "./middlewares";
 import * as reducers from './ducks';
 
+// redux-persist configuration
 const persistConfig = {
 	key: 'root',
 	storage: storage,

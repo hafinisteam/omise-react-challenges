@@ -62,7 +62,7 @@ UICard.propTypes = {
 	image: PropTypes.string,
 	title: PropTypes.string.isRequired,
 	extraTitle: PropTypes.object,
-	overlay: PropTypes.func
+	overlay: PropTypes.object
 };
 
 export default UICard;

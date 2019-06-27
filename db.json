@@ -73,6 +73,18 @@
     },
     {
       "id": 8
+    },
+    {
+      "charitiesId": 99,
+      "amount": 200,
+      "currency": "ETH",
+      "id": 9
+    },
+    {
+      "charitiesId": 99,
+      "amount": 200,
+      "currency": "ETH",
+      "id": 10
     }
   ]
 }
