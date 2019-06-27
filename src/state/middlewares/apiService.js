@@ -10,7 +10,7 @@ const apiService = () => next => action => {
     });
   }
 
-  const { path, method = "get", body, withToken = false } = action.meta;
+  const { path, method = "get", body} = action.meta;
   if (!path) {
     throw new Error(`'path' not specified for async action ${action.type}`);
   }
@@ -20,7 +20,7 @@ const apiService = () => next => action => {
   if (path.startsWith("/")) {
     url = `${BASE_URL}${path}`;
   }
-  return fetch(url, method, body, withToken).then(
+  return fetch(url, method, body).then(
     res => handleResponse(res, action, next),
     err => handleErrors(err, action, next)
   );

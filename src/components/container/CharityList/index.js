@@ -4,17 +4,17 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import {
 	getCharityList,
-	getPaymentList
+	getPaymentList,
+	payDonation
 } from '~/state/ducks/actions/charityPayment';
-import { donationDataAction } from '~/state/ducks/donationData';
-import { UIButton } from '~/components/presentation/ui/button';
 import { message, Spin } from 'antd';
+import { donationDataAction } from '~/state/ducks/donationData';
 import { summaryDonations } from '~/helpers';
-import UICard from '~/components/presentation/ui/commons/UICard';
 import useMiniReducer from '~/components/container/enhancers/useMiniReducer';
+import CharityItem from './CharityItem';
 
 const Wrapper = styled.div`
-	margin-top: 50px;
+	margin-top: 30px;
 `;
 
 const Item = styled.div`
@@ -65,11 +65,7 @@ const CharityList = props => {
 		<Wrapper className="row">
 			{data.map(charity => (
 				<Item className="col-12 col-sm-6" key={charity.id}>
-					<UICard
-						image={`/images/${charity.image}`}
-						title={charity.name}
-						extraTitle={<UIButton>Donate</UIButton>}
-					/>
+					<CharityItem charity={charity} />
 				</Item>
 			))}
 		</Wrapper>
@@ -82,6 +78,7 @@ export default compose(
 		{
 			getCharityList,
 			getPaymentList,
+			payDonation,
 			updateDonation: donationDataAction.updateDonation
 		}
 	)
