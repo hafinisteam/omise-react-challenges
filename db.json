@@ -67,6 +67,12 @@
       "amount": 30,
       "currency": "USD",
       "id": "b01507f0-9981-11e9-b139-e944266a1c6b"
+    },
+    {
+      "charitiesId": 1,
+      "amount": 100,
+      "currency": "USD",
+      "id": "878ea580-998a-11e9-b152-5d3da31e750b"
     }
   ]
 }
