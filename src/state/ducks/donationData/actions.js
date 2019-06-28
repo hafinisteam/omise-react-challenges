@@ -4,6 +4,9 @@ import apiAction, { defaultAction } from '../utils/createAction';
 export const updateDonation = amount =>
 	defaultAction(types.UPDATE_TOTAL_DONATE, { amount });
 
+export const updatePayments = payment =>
+	defaultAction(types.UPDATE_PAYMENTS, { payment });
+
 export const updateMessage = message =>
 	defaultAction(types.UPDATE_MESSAGE, { message });
 

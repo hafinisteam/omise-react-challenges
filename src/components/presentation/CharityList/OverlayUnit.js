@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { UIButton } from '~/components/presentation/ui/button';
 import { donateRange } from '~/configs';
 import currencyData from '~/configs/currency.json';
+import { mediaMax } from '~/utilities/layout';
 
 const { Option } = Select;
 
@@ -46,6 +47,18 @@ export const OverlayWrapper = styled(animated.div)`
 		font-size: 16px;
 		font-weight: 700;
 	}
+	${mediaMax.xl`
+		.intro {
+			font-size: 16px;
+			span {
+				margin-bottom: 10px;
+			}
+		}
+		span.ant-radio + * {
+			font-size: 14px;
+			font-weight: 400;
+		}
+	`}
 `;
 
 const OverlayUnit = props => {

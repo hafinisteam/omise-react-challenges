@@ -10,6 +10,7 @@ import { donationDataAction } from '~/state/ducks/donationData';
 import { summaryDonations } from '~/helpers';
 import useMiniReducer from '~/components/container/enhancers/useMiniReducer';
 import CharityItem from './CharityItem';
+import { mediaMax } from '~/utilities/layout';
 
 const Wrapper = styled.div`
 	margin-top: 30px;
@@ -18,6 +19,12 @@ const Wrapper = styled.div`
 const Item = styled(animated.div)`
 	margin-bottom: 50px;
 	will-change: opacity, transform;
+	${mediaMax.xl`
+		margin-bottom: 35px;
+  `}
+	${mediaMax.sm`
+		margin-bottom: 20px;
+  `}
 `;
 
 const LoadingWrapper = styled.div`
