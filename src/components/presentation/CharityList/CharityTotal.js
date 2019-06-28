@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
+import Proptypes from 'prop-types';
 import { UIButton } from "~/components/presentation/ui/button";
 import COLOR from "~/utilities/layout/color";
 import { donationDataSelector } from "~/state/ducks/donationData";
@@ -14,18 +15,21 @@ const TotalStyled = styled(UIButton)`
   color: ${COLOR.pink};
   cursor: default;
   &:hover {
-    background: ${COLOR.white};
-    color: ${COLOR.pink};
+    background: ${COLOR.pink};
   }
 `;
 
 const CharityTotal = ({ total }) => {
   return (
     <Wrapper>
-      <TotalStyled as="span">Total donation: {total} $</TotalStyled>
+      <TotalStyled>Total donation: {total}</TotalStyled>
     </Wrapper>
   );
 };
+
+CharityTotal.propTypes = {
+  total: Proptypes.number.isRequired
+} 
 
 export default connect(state => ({
   total: donationDataSelector.getDonation(state)

@@ -115,6 +115,36 @@
       "amount": 50,
       "currency": "USD",
       "id": "f36ca6d0-98fe-11e9-a640-f9aa063cd095"
+    },
+    {
+      "charitiesId": 1,
+      "amount": 100,
+      "currency": "USD",
+      "id": "514a1760-9959-11e9-ab84-2bffda0f29e8"
+    },
+    {
+      "charitiesId": 1,
+      "amount": 50,
+      "currency": "USD",
+      "id": "7acbcbf0-995f-11e9-878f-0151bab340fe"
+    },
+    {
+      "charitiesId": 2,
+      "amount": 100,
+      "currency": "USD",
+      "id": "7d062b90-995f-11e9-878f-0151bab340fe"
+    },
+    {
+      "charitiesId": 1,
+      "amount": 30,
+      "currency": "USD",
+      "id": "46a06e20-9960-11e9-9474-bf1885ba12c3"
+    },
+    {
+      "charitiesId": 1,
+      "amount": 50,
+      "currency": "USD",
+      "id": "25705b80-9973-11e9-bbe4-390d5983e188"
     }
   ]
 }

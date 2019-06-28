@@ -6,7 +6,8 @@ import { Layout as BaseLayout } from "antd";
 import store from "./state/store";
 import CharityList from "./components/container/CharityList";
 import COLOR from "./utilities/layout/color";
-import CharityTotal from "./components/container/CharityList/CharityTotal";
+import { CharityTotal } from "./components/presentation/CharityList";
+
 
 const Layout = styled(BaseLayout)`
   background: white;
