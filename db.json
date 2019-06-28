@@ -33,88 +33,40 @@
   ],
   "payments": [
     {
-      "charitiesId": "c98dad80-98ec-11e9-8d27-576733d91ed4",
-      "amount": 30,
-      "currency": "USD",
-      "id": "c98dad81-98ec-11e9-8d27-576733d91ed4"
-    },
-    {
-      "charitiesId": "e0e20250-98ed-11e9-8ca4-019144f61204",
-      "amount": 100,
-      "currency": "USD",
-      "id": "e0e20251-98ed-11e9-8ca4-019144f61204"
-    },
-    {
-      "charitiesId": "01e89950-98ee-11e9-ae22-71ab1414fa02",
-      "amount": 100,
-      "currency": "USD",
-      "id": "01e89951-98ee-11e9-ae22-71ab1414fa02"
-    },
-    {
-      "charitiesId": 2,
-      "amount": 50,
-      "currency": "EUR",
-      "id": "c213a710-98f8-11e9-962d-c38cb4139efd"
-    },
-    {
-      "charitiesId": 2,
-      "amount": 10,
-      "currency": "USD",
-      "id": "0874ecf0-98f9-11e9-ba59-bb228f7548f3"
-    },
-    {
-      "charitiesId": 2,
-      "amount": 10,
-      "currency": "USD",
-      "id": "108cc390-98f9-11e9-9bac-41250b1cba23"
-    },
-    {
-      "charitiesId": 2,
-      "amount": 30,
-      "currency": "USD",
-      "id": "4ec56d20-98fd-11e9-9967-d76af3ce38bd"
-    },
-    {
-      "charitiesId": 4,
-      "amount": 100,
-      "currency": "THB",
-      "id": "b9a5f600-98fd-11e9-bdd8-15390fcf8bc5"
-    },
-    {
-      "charitiesId": 2,
-      "amount": 30,
-      "currency": "USD",
-      "id": "db32d400-98fd-11e9-bdb0-c9689252ca22"
-    },
-    {
       "charitiesId": 1,
       "amount": 100,
       "currency": "USD",
-      "id": "dda70850-98fd-11e9-bdb0-c9689252ca22"
-    },
-    {
-      "charitiesId": 1,
-      "amount": 10,
-      "currency": "USD",
-      "id": "fae4d780-98fd-11e9-a99e-7fd4a0437575"
+      "id": "540def50-997a-11e9-b21e-3b951fa45d6b"
     },
     {
       "charitiesId": 2,
-      "amount": 30,
-      "currency": "USD",
-      "id": "fd07de90-98fd-11e9-a99e-7fd4a0437575"
-    },
-    {
-      "charitiesId": 1,
       "amount": 100,
       "currency": "USD",
-      "id": "6c2092e0-98fe-11e9-ab23-5d250cba3645"
+      "id": "7c10dad0-997a-11e9-b246-47b737e5e89b"
     },
     {
       "charitiesId": 1,
       "amount": 50,
       "currency": "USD",
-      "id": "f36ca6d0-98fe-11e9-a640-f9aa063cd095"
+      "id": "fcfb53a0-997a-11e9-b5ea-85f1200c5a5c"
+    },
+    {
+      "charitiesId": 1,
+      "amount": 50,
+      "currency": "USD",
+      "id": "13e395a0-997b-11e9-80b2-c5c37c76b4f2"
+    },
+    {
+      "charitiesId": 1,
+      "amount": 100,
+      "currency": "CAD",
+      "id": "18fe31d0-997b-11e9-80b2-c5c37c76b4f2"
+    },
+    {
+      "charitiesId": 1,
+      "amount": 30,
+      "currency": "USD",
+      "id": "b01507f0-9981-11e9-b139-e944266a1c6b"
     }
   ]
 }
