@@ -97,6 +97,12 @@
       "amount": 10,
       "currency": "CAD",
       "id": "2eeebd60-9a2b-11e9-b975-9b10b4855cce"
+    },
+    {
+      "charitiesId": 1,
+      "amount": 10,
+      "currency": "EUR",
+      "id": "6f80da10-9b5d-11e9-bf69-6fbb7b304246"
     }
   ]
 }
