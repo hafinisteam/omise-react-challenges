@@ -17,4 +17,6 @@ const UIButton = styled.button`
   }
 `;
 
+UIButton.displayName = "UIButton";
+
 export default UIButton;

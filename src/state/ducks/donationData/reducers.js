@@ -6,7 +6,7 @@ const initialState = {
 	donate: 0,
 	message: '',
 	payments: [],
-	charities: []
+	charities: [],
 };
 
 const reducer = produce((draft, { payload, type }) => {
