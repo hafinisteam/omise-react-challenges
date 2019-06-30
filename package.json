@@ -8,7 +8,7 @@
   "scripts": {
     "server": "json-server --watch db.json --port 3001",
     "client": "webpack-dev-server --mode development",
-    "build": "webpack --mode production --config webpack.config.js ",
+    "build": "webpack --mode production --config webpack.config.js && serve -s build",
     "test": "jest --watch"
   },
   "dependencies": {
