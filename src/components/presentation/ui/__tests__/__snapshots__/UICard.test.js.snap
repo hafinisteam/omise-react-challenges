@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UICard /> render correctly with props 1`] = `
+.c0 {
+  border-radius: 5px;
+  box-shadow: -1px 5px 6px -2px #66728852;
+  border: 1px solid #f2f2f2;
+  overflow: hidden;
+  position: relative;
+}
+
+.c1 {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.c1 img {
+  width: 100%;
+}
+
+.c2 {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c2 .card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #667288;
+  margin-bottom: 0;
+}
+
+@media (max-width:1200px) {
+  .c1 {
+    height: 200px;
+  }
+}
+
+@media (max-width:768px) {
+  .c1 {
+    height: 150px;
+  }
+}
+
+@media (max-width:1200px) {
+  .c2 {
+    padding: 10px;
+  }
+}
+
+@media (max-width:768px) {
+  .c2 .card-title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:576px) {
+  .c2 .card-title {
+    font-size: 16px;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <img
+      src="https://via.placeholder.com/350x150"
+    />
+  </div>
+  <div
+    className="c2"
+  >
+    <h3
+      className="card-title"
+    >
+      Ha Nguyen
+    </h3>
+    <div>
+      <p>
+        Extra
+      </p>
+    </div>
+  </div>
+</div>
+`;
