@@ -2,7 +2,7 @@
 
 Since the originial design is good enough to work with, I'm not good at designing so I don't know how to upgrade it 
 
-** What should be done first to work **
+**What should be done first to work**
 
 - [x] Upgrade all packages to latest version
 - [x] Upgrade babel, eslint, jest, webpack configuration
@@ -15,7 +15,7 @@ Since the originial design is good enough to work with, I'm not good at designin
 - [x] Add both product and development config for webpack
 - [x] Supporting different screen sizes (responsive)
 
-** To run application **
+**To run application**
 
 
 ##### `npm run server` or `yarn server`
